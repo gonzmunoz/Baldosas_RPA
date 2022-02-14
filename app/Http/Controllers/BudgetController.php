@@ -52,7 +52,7 @@ class BudgetController extends Controller
     }
 
     public function listBudgets(){
-        $_data['budgets'] = BudgetModel::select('presupuestos.id','nombre_apellidos', 'presupuestos.email', 'presupuestos.telefono', 'presupuestos.direccion', 'presupuestos.codigo_postal', 'presupuestos.metros_cuadrados', 'presupuestos.tipo_habitacion', 'presupuestos.id_baldosa', 'presupuestos.fecha_finalizacion', 'presupuestos.fecha_solicitud', 'presupuestos.aprobado', 'baldosas.nombre as tipo_suelo')
+        $_data['budgets'] = BudgetModel::select('presupuestos.id','nombre_apellidos', 'presupuestos.email', 'presupuestos.telefono', 'presupuestos.direccion', 'presupuestos.codigo_postal', 'presupuestos.metros_cuadrados', 'presupuestos.tipo_habitacion', 'presupuestos.id_baldosa', 'presupuestos.fecha_finalizacion', 'presupuestos.fecha_solicitud', 'presupuestos.validado', 'presupuestos.aprobado', 'baldosas.nombre as tipo_suelo')
         ->join('baldosas', 'presupuestos.id_baldosa', '=', 'baldosas.id')->get()->toArray();
         return view('listBudgets', $_data);
     }
