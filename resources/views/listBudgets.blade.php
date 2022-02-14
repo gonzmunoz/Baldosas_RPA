@@ -23,6 +23,7 @@
                             <th class="align-middle text-white">Tipo de Habitación</th>
                             <th class="align-middle text-white">Fecha Finalización</th>
                             <th class="align-middle text-white">Fecha Solicitud</th>
+                            <th class="align-middle text-white">Validado</th>
                             <th class="align-middle text-white">Aprobado</th>
                         </tr>
                     </thead>
@@ -42,6 +43,11 @@
                             <td class="align-middle" title="{{ $budget['tipo_habitacion'] }}">{{ $budget['tipo_habitacion'] }}</td>
                             <td class="align-middle" title="{{ $budget['fecha_finalizacion'] }}">{{ date('d-m-Y', strtotime($budget['fecha_finalizacion'])) }}</td>
                             <td class="align-middle" title="{{ $budget['fecha_solicitud'] }}">{{ date('d-m-Y', strtotime($budget['fecha_solicitud'])) }}</td>
+                            @if($budget['validado'] == 0)
+                            <td class="align-middle" title="No">No</td>
+                            @else
+                            <td class="align-middle" title="Si">Si</td>
+                            @endif
                             @if($budget['aprobado'] == 0)
                             <td class="align-middle" title="No">No</td>
                             @else
