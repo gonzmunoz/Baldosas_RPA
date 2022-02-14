@@ -18,7 +18,6 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/templete.min.css') }}">
     <link class="skin" rel="stylesheet" type="text/css" href="{{ asset('css/skin/skin-1.css') }}">
@@ -37,7 +36,6 @@
 </head>
 
 <body id="bg">
-    <div id="loading-area" class="loader1"></div>
     <div class="page-wraper d-flex flex-column min-vh-100">
         <!-- header -->
         <header class="site-header header header-style-6 style-1">
@@ -73,8 +71,6 @@
                 <div class="main-bar clearfix ">
                     <div class="navigation-bar">
                         <div class="container clearfix">
-                            <!-- website logo -->
-                            <div class="logo-header mostion"><a href="index.html"><img src="{{ asset('images/logo-white.png') }}" width="193" height="89" alt=""></a></div>
                             <!-- nav toggle button -->
                             <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                                 <span></span>
@@ -102,7 +98,7 @@
         </header>
         <!-- header END -->
         <!-- Content -->
-        <div class="page-content">
+        <div class="page-content mx-auto"> 
             @yield('content')
             <!-- Content END-->
         </div>

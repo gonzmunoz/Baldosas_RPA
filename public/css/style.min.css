@@ -3191,7 +3191,7 @@ blockquote:before {
 }
 
 #header-part.full-width .main-bar .container, #header-part.full-width .top-bar .container {
-    width: auto
+    width: 100px;
 }
 
 [class*=bg-] .header-nav .nav > li > a {

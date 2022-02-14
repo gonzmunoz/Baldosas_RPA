@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-<div class="container mt-5">
+<div class="pl-5 pr-5 mt-5">
     <div class="row">
         <div class="col-12 m-b30">
             <div class="table-responsive">
-                <table class="table check-tbl text-center" id="budgets-table">
+                <table class="table check-tbl text-center pr-5" id="budgets-table">
                     <thead style="background-color: #EE3131" class="text-light">
                         <tr>
                             <th class="align-middle text-white">ID</th>
