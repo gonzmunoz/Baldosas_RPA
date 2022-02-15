@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="pl-5 pr-5 mt-5">
+<div class="pl-5 pr-5 mt-5 mx-auto">
     <div class="row">
         <div class="col-12 m-b30">
             <div class="table-responsive">
