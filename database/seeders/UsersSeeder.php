@@ -17,9 +17,18 @@ class UsersSeeder extends Seeder
     public function run(Faker $faker)
     {
         DB::table('usuarios')->insert([
-            'nombre' => 'Gonzalo',
-            'apellidos' => 'Muñoz Romero',
+            'nombre' => 'Baldosas',
+            'apellidos' => 'RPA',
+            'tipo_usuario' => 'admin',
             'email' => 'admin@baldosasrpa.com',
+            'contrasenia' => Hash::make('generation'),
+        ]);
+
+        DB::table('usuarios')->insert([
+            'nombre' => 'Pepe',
+            'apellidos' => 'Gotera',
+            'tipo_usuario' => 'trabajador',
+            'email' => 'gonzalomr95@hotmail.com',
             'contrasenia' => Hash::make('generation'),
         ]);
 
