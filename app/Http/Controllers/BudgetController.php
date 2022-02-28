@@ -29,8 +29,9 @@ class BudgetController extends Controller
         $data['fecha_finalizacion'] = date('Y-m-d', substr(strtotime($data['fecha_finalizacion']), 0, 10)); // Dar formato de datetime a la fecha
 
         $data["fecha_solicitud"] = Carbon::now()->toDateString(); // Guardar en el campo fecha_solictud la fecha de hoy
-        $data["aprobado"] = false; // Guardasr en el campo aprobado que el presupuesto no está aprobado todavía (no se aprueba hasta que el cliente lo acepte)
-
+        $data["validado"] = false; // Guardar en el campo valiado que el presupuesto no está validado todavía
+        $data["aprobado"] = false; // Guardar en el campo aprobado que el presupuesto no está aprobado todavía (no se aprueba hasta que el cliente lo acepte)
+        
         try {
             BudgetModel::insert($data);
             // Mensaje indicando que la solicitud de presupuesto se ha guardado correctamente
@@ -42,7 +43,7 @@ class BudgetController extends Controller
             // DB::rollback();
             // Mensaje si ha habido algún error al insertar el presupueso en la base de datos
             $msg['icon'] = 'error';
-            $msg['title'] = 'Error al guardar la solicitud. Es posible que haya una solicitu d con su email';
+            $msg['title'] = 'Error al guardar la solicitud.';
             $msg['text'] = 'Por favor inténtelo más tarde o póngase en contacto con nosotros';
             $request->session()->flash('response-form', $msg);
         }

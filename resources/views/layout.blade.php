@@ -49,7 +49,7 @@
                             <ul class="contact-info clearfix">
                                 <li>
                                     <h6 class="text-primary"><i class="ti-mobile text-primary"></i> Llámanos</h6>
-                                    <span>957957957</span>
+                                    <span>666666666</span>
                                 </li>
                                 <li>
                                     <h6 class="text-primary"><i class="ti-email text-primary"></i> Mándanos un email</h6>
